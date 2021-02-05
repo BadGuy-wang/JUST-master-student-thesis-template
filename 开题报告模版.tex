@@ -1,34 +1,37 @@
 %-*- coding: UTF-8 -*-
 % author：wanghuai
 % date：2021.1.20
-% Jiangxi University of Science And Technology
+% Jiangxi University of Science and Technology
 
 % ========================
 %|                        |
-%|         导包	        |
+%|         导包	          |
 %|                        |
 % ========================
 
 \documentclass[hyperref,UTF8]{ctexart}
 % 导入PDF的包
 \usepackage{float}
-\usepackage{pdfpages} 
+\usepackage{pdfpages}
 \usepackage{setspace}
 \usepackage{fontspec}
 \setmainfont{Times New Roman}
 % 将章节序号改为中文
+
+% Texpad 闪退，则需要将以下三行注释掉，并设置 Texpad 为使用外部编译器
 \usepackage{zhnumber} 
 \renewcommand \thesection {\zhnum{section}}
 \renewcommand \thesubsection {\arabic{section}.\arabic{subsection}}
+
 % 设置页边距
-\usepackage{geometry} 
+\usepackage{geometry}
 \geometry{left=2.5cm,right=2.0cm,top=2.5cm,bottom=2.0cm}
 % 设置页眉的包
-\usepackage{fancyhdr} 
-\pagestyle{fancy}	
+\usepackage{fancyhdr}
+\pagestyle{fancy}
 \fancyhf{}
 % 设置页码
-\cfoot{\thepage}													
+\cfoot{\thepage}
 
 % 设置目录内容格式
 \usepackage{titletoc}
@@ -45,10 +48,10 @@
     {~\titlerule*[0.8pc]{$.$}~\contentspage} %调整连接点粗细
 \titlecontents{subsection}[6em]
     {
-        \zihao{4} 
+        \zihao{4}
         \vspace{11pt}
     } 
-    {\contentslabel{2em}} 
+    {\contentslabel{2em}}
     {\hspace*{-2em}}
     {~\titlerule*[0.6pc]{$.$}~\contentspage}
 % 设置每节标题格式
@@ -63,11 +66,11 @@
 
 % 取消图片注释中的冒号
 \usepackage{caption}
-\DeclareCaptionLabelSeparator{twospace}{\ ~} 
+\DeclareCaptionLabelSeparator{twospace}{\ ~}
 \captionsetup{labelsep=twospace}
 
 % 使用biblatex编译参考文献
-%\usepackage{biblatex}  
+%\usepackage{biblatex}
 
 
 % ========================
